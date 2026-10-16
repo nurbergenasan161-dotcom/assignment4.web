@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --green: #0F6B5F;
+    --gold: #F2A93B;
+    --dark: #16302B;
+    --pale: #F4F7F5;
+    --mint: #E6EFEC
+}
+
+body {
+    font-family: Montserrat, Arial, sans-serif;
+    background: var(--mint);
+    color: var(--dark)
+}
+
+.links {
+    max-width: 900px;
+    margin: 20px auto;
+    display: flex;
+    gap: 20px;
+    padding: 0 12px;
+    flex-wrap: wrap
+}
+
+.links a {
+    color: var(--green);
+    font-weight: 700
+}
+
+main {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 0 12px 40px
+}
+
+.form-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 14px 35px #16302b28
+}
+
+.banner {
+    background: var(--green);
+    color: white;
+    padding: 26px 32px;
+    font-size: 1.4rem;
+    font-weight: 800
+}
+
+.form-inner {
+    padding: 30px 32px
+}
+
+.form-label,
+legend {
+    font-weight: 700;
+    font-size: .86rem
+}
+
+.form-control,
+.form-select {
+    border-radius: 10px;
+    background: var(--pale);
+    border-color: #dbe6e1;
+    padding: 12px
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--green);
+    box-shadow: 0 0 0 .2rem #0f6b5f20
+}
+
+.form-check-input:checked {
+    background-color: var(--green);
+    border-color: var(--green)
+}
+
+.form-check-label {
+    font-size: .85rem
+}
+
+.btn-gold {
+    background: var(--gold);
+    font-weight: 800;
+    border-radius: 12px;
+    padding: 12px 25px
+}
+
+.btn-outline-green {
+    border: 1px solid var(--green);
+    border-radius: 12px;
+    padding: 12px 25px
+}
+
+.buttons {
+    display: flex;
+    justify-content: end;
+    gap: 12px
+}
+
+.trip-choice .btn {
+    border-color: var(--green);
+    color: var(--green);
+    font-weight: 700
+}
+
+.trip-choice .btn-check:checked+.btn {
+    background: var(--green);
+    color: white
+}
+
+.prefix {
+    background: var(--green);
+    color: white
+}
+
+.hint {
+    font-size: .82rem;
+    color: #50665e
+}
+
+.field :is(input, select, textarea):user-invalid {
+    border-color: #c9364a
+}
+
+.field :is(input, select, textarea):user-invalid~.invalid-feedback {
+    display: block
+}
+
+.field :is(input, select, textarea):user-valid {
+    border-color: #198754
+}
+
+.radio-field:has(input:user-invalid) .invalid-feedback,
+.check-field:has(input:user-invalid) .invalid-feedback {
+    display: block
+}
+
+textarea {
+    min-height: 120px
+}
+
+@media(max-width:575px) {
+    main {
+        margin: 10px auto
+    }
+
+    .banner {
+        padding: 20px;
+        font-size: 1.15rem
+    }
+
+    .form-inner {
+        padding: 20px 16px
+    }
+
+    .buttons {
+        flex-direction: column
+    }
+
+    .buttons .btn-gold {
+        order: -1
+    }
+
+    .buttons button {
+        width: 100%
+    }
+
+    .trip-choice {
+        display: flex
+    }
+
+    .trip-choice label {
+        flex: 1
+    }
+}
