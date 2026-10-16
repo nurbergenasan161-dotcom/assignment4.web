@@ -1,6 +1,6 @@
 # Assignment 4 — Forms and Validation
 
-Student: Kuvandyk Bekarys (IT-2511)
+Student: Assan Nurbergen (IT-2511)
 
 - task1.html — train booking form
 - task2.html — HTML validation
